@@ -83,7 +83,7 @@ streamlit run app.py
 ```
 
 **Akses prototype online (Streamlit Community Cloud):**
-> 🔗 **[Link prototype — tambahkan setelah deploy ke Streamlit Cloud]**
+> 🔗 **https://jaya-jaya-institut-linda.streamlit.app**
 
 **Struktur file model:**
 ```
