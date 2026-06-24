@@ -4,6 +4,8 @@ import numpy as np
 import joblib
 import os
 
+st.cache_resource.clear()
+
 st.set_page_config(
     page_title="Jaya Jaya Institut — Student Dropout Predictor",
     page_icon="🎓",
@@ -28,9 +30,9 @@ def load_model():
 try:
     model, scaler, encoder = load_model()
     model_loaded = True
-except:
+except Exception as e:
     model_loaded = False
-    st.warning("Model belum tersedia. Jalankan notebook.ipynb terlebih dahulu untuk melatih model.")
+    st.error(f"Error: {e}")
 
 st.sidebar.header("Input Data Mahasiswa")
 
