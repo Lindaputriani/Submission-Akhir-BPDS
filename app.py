@@ -18,9 +18,11 @@ Masukkan data mahasiswa di bawah ini untuk mendapatkan prediksi status.
 
 @st.cache_resource
 def load_model():
-    model   = joblib.load('model/gb_model.pkl')
-    scaler  = joblib.load('model/scaler.pkl')
-    encoder = joblib.load('model/label_encoder.pkl')
+    import os
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    model   = joblib.load(os.path.join(base_dir, 'model', 'gb_model.pkl'))
+    scaler  = joblib.load(os.path.join(base_dir, 'model', 'scaler.pkl'))
+    encoder = joblib.load(os.path.join(base_dir, 'model', 'label_encoder.pkl'))
     return model, scaler, encoder
 
 try:
